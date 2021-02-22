@@ -1,0 +1,12 @@
+{
+	"name": "DataSource",
+	"properties": {
+		"description": "Connect to your data source store.",
+		"linkedServiceName": {
+			"referenceName": "Jieru_AdventureWorksDW2019",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable"
+	}
+}
