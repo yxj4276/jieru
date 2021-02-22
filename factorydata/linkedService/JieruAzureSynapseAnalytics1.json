@@ -1,0 +1,12 @@
+{
+	"name": "JieruAzureSynapseAnalytics1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=jieru1stdatabaseserver.database.windows.net;initial catalog=Jieru2ndDatabase;user id=Jieru",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkpJRVJVMVNUREFUQUZBQ1RPUllfYWNhNDI5ZjQtZDM3YS00Y2U2LThiNGYtNzFjNjg4NTY3MmYxIg0KfQ=="
+		}
+	}
+}
