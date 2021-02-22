@@ -1,0 +1,13 @@
+{
+	"name": "Jieru_AdventureWorksDW2019",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESKTOP-VTA7L07;initial catalog=AdventureWorksDW2019",
+			"userName": "Jieru",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkpJRVJVMVNUREFUQUZBQ1RPUllfZmE4Yzg1MGQtODhhNS00YmNhLTg3ZmQtMmQ0NTU3MDgxZjkwIg0KfQ=="
+		}
+	}
+}
