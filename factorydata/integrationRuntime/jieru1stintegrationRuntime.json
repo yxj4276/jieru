@@ -1,0 +1,32 @@
+{
+	"name": "jieru1stintegrationRuntime",
+	"properties": {
+		"type": "Managed",
+		"description": "jieru1stintegrationRuntime",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "Central US",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 8,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/ee29781b-d2ac-40bc-927b-4a1acbf339e3/resourceGroups/JieruResourceGroup/providers/Microsoft.Network/virtualNetworks/Jieru1stVirtualNetwork",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "jieru1stdatabaseserver.database.windows.net",
+					"catalogAdminUserName": "Jieru",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded"
+			}
+		}
+	}
+}
