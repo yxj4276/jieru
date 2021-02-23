@@ -1,0 +1,17 @@
+{
+	"name": "Jieru1sttrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-02-23T04:10:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
