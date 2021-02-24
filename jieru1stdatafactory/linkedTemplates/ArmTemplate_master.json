@@ -1,0 +1,97 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "jieru1stdatafactory"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"JieruAzureSynapseAnalytics1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'JieruAzureSynapseAnalytics1'"
+		},
+		"Jieru_AdventureWorksDW2019_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Jieru_AdventureWorksDW2019'"
+		},
+		"Jieru_AdventureWorksDW2019_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Jieru_AdventureWorksDW2019'"
+		},
+		"Jieru_AdventureWorksDW2019_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Jieru"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "jieru1stdatabaseserver.database.windows.net"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "Jieru"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "jieru1stdatafactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"JieruAzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('JieruAzureSynapseAnalytics1_connectionString')]"
+					},
+					"Jieru_AdventureWorksDW2019_connectionString": {
+						"value": "[parameters('Jieru_AdventureWorksDW2019_connectionString')]"
+					},
+					"Jieru_AdventureWorksDW2019_password": {
+						"value": "[parameters('Jieru_AdventureWorksDW2019_password')]"
+					},
+					"Jieru_AdventureWorksDW2019_properties_typeProperties_userName": {
+						"value": "[parameters('Jieru_AdventureWorksDW2019_properties_typeProperties_userName')]"
+					},
+					"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

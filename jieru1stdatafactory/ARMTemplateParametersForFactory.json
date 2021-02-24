@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "jieru1stdatafactory"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"JieruAzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"Jieru_AdventureWorksDW2019_connectionString": {
+			"value": ""
+		},
+		"Jieru_AdventureWorksDW2019_password": {
+			"value": ""
+		},
+		"Jieru_AdventureWorksDW2019_properties_typeProperties_userName": {
+			"value": "Jieru"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "jieru1stdatabaseserver.database.windows.net"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "Jieru"
+		},
+		"jieru1stintegrationRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		}
+	}
+}
